@@ -1,198 +1,86 @@
 <p align="center">
-  <img src="Images/PowerOR_Promo.png" alt="PowerOR Promo Image" width="85%">
+  <img src="Images/PowerOR_Promo.png" alt="PS2-PowerOR Project Banner" width="85%">
 </p>
 
-# PS2 PowerOR
+# PS2-PowerOR
 
-PowerOR is an experimental power OR-ing project for PlayStation 2 Slim consoles.
+PS2-PowerOR is an FBD / Fat Bald Dad project focused on PlayStation 2 Slim power-source management and preservation research.
 
-The goal of this project is to explore a safer way to allow a PS2 Slim to use either the original OEM power supply or an alternate USB-C PD power source, while keeping the OEM power supply as the preferred/default option.
+> [!IMPORTANT]
+> PS2-PowerOR is currently in private development.
+>
+> This public repository exists to document the project name, ownership, development status, public-facing goals, and safety position of the FBD PS2-PowerOR project.
+>
+> This is not an open-source hardware or manufacturing release at this time.
+>
+> Production hardware files, PCB files, Gerber files, KiCad design files, manufacturing files, detailed installation methods, test data, power-validation data, and internal development notes are intentionally not included.
+>
+> No permission is granted to manufacture, clone, sell, rehost, redistribute, or create derivative hardware based on this project without written permission from Fat Bald Dad / FBD Retro Game.
 
-This project is currently experimental and should not be treated as a finished or proven power solution.
+## Project Purpose
 
----
+PS2-PowerOR explores safer ways to study alternate power-source options for compatible PlayStation 2 Slim consoles while preserving the original OEM power input as the preferred and default option.
 
-## What This Project Is
+## What PS2-PowerOR Is Trying to Do
 
-PowerOR is a prototype hardware project for testing dual-input power on a PlayStation 2 Slim.
+The project is centered on responsible research, platform preservation, and long-term safety-minded documentation for PS2 Slim power-source management concepts.
 
-The basic idea is:
+## Current Development Status
 
-- Keep the original PS2 OEM power input.
-- Add an optional USB-C PD power input.
-- Give the OEM power supply priority when it is connected.
-- Prevent the OEM PSU and USB-C PD source from directly fighting each other.
-- Provide a compact power board that may fit inside custom PS2 Slim builds.
+PS2-PowerOR is in private development.
 
-This project is being developed for testing, documentation, and learning.
+Public materials in this repository are intentionally limited while active development and validation continue in a private environment.
 
----
+## Public Repository Purpose
 
-## What This Project Is Not
+This public repository exists for project identification, ownership record, brand awareness, safety warnings, and high-level public documentation.
 
-PowerOR is not a finished commercial product.
+## Safety Position
 
-PowerOR is not a universal USB-C power mod for every PS2.
+PS2-PowerOR is experimental research work and is not presented as a finished product or guaranteed safe USB-C power solution.
 
-PowerOR is not intended for heavily modified consoles that draw significantly more current than a normal PS2 Slim.
+See [SAFETY_AND_LIMITATIONS.md](SAFETY_AND_LIMITATIONS.md) for public safety guidance.
 
-This project is not currently recommended for consoles with high-power internal upgrades such as:
+## What Is Not Public Yet
 
-- RetroGEM
-- Internal IDE interfaces
-- Large internal storage setups
-- High-current internal accessories
-- Multiple power-hungry mods installed at the same time
+This repository is not currently an open-source hardware or manufacturing release.
 
-If your console has several internal mods that increase power draw, this project may not be suitable without additional testing and a higher-current power design.
+Production hardware files, PCB files, Gerbers, KiCad files, manufacturing files, detailed installation methods, test data, and internal development notes are intentionally not included.
 
----
+## Public Folder Status
 
-## Experimental Status
+- [Archive](Archive/README.md)
+- [Documents](Documents/README.md)
+- [Hardware](Hardware/README.md)
+- [Images](Images/README.md)
+- [References](References/README.md)
+- [Testing](Testing/README.md)
 
-This project is experimental.
+## Community Feedback
 
-USB-C PD power mods for the PS2 are still a sensitive topic because poor power designs can damage consoles. Trigger boards, buck converters, wiring size, grounding, voltage stability, ripple, and current capacity all matter.
+Public feedback is welcome through issues and discussions focused on high-level project direction, safety observations, and documentation clarity.
 
-This project should be treated as a prototype until it has been properly tested.
+## Not Currently Accepted
 
-Before using this in a console, the design needs to be tested for:
+This repository does not accept public hardware design submissions, manufacturing packages, private-method test disclosures, or derivative product development proposals.
 
-- Correct output voltage
-- Proper USB-C PD negotiation
-- Current handling
-- Heat generation
-- Voltage drop under load
-- Ripple and noise
-- Safe power-source switching
-- OEM PSU priority behavior
-- Long-term console stability
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Do not assume this design is safe just because it powers on a console.
+## Relationship to Other FBD Projects
 
----
+PS2-PowerOR is part of the broader Fat Bald Dad / FBD Retro Game project portfolio and follows the same public-facing project-claim and safety-first communication approach.
 
-## Intended Use Case
+## License / Usage
 
-PowerOR is mainly intended for lower-power PS2 Slim builds.
+Use of this repository is governed by the proprietary notice in [LICENSE](LICENSE).
 
-The best candidates are simpler builds that do not have a large number of power-hungry internal mods.
+No permission is granted to manufacture, clone, sell, rehost, redistribute, or create derivative hardware/products from this project without written permission from Fat Bald Dad / FBD Retro Game.
 
-Possible intended use cases include:
+## Project Owner
 
-- Lightly modified PS2 Slim consoles
-- Ultra Slim style builds
-- Consoles without the optical drive installed
-- Builds using lower-current accessories
-- Consoles where the OEM PSU option should remain available
+Project owner: Burch Goldner (Fat Bald Dad)  
+Brand: FBD Retro Game / Fat Bald Dad
 
-The SCPH-790xx series may be one of the better candidates for this kind of testing because these boards generally use less power than earlier Slim models, especially when the optical drive is removed.
+## Future Direction
 
----
-
-## Not Recommended For
-
-At this stage, PowerOR is not recommended for heavy builds.
-
-Avoid using this design on consoles with major power additions unless you fully understand the current requirements and have tested the power system properly.
-
-Examples of builds that may require more power than this project is currently intended for:
-
-- RetroGEM HDMI installs
-- Internal IDE or hard drive interfaces
-- Large internal SSD or HDD setups
-- Multiple wireless modules
-- Multiple internal converters
-- Consoles with several active mods powered at the same time
-
-Those builds may need a more robust power solution with higher current capacity, better thermal handling, and more complete protection.
-
----
-
-## Design Goals
-
-The goals of this project are:
-
-- Preserve the original OEM power input
-- Allow optional USB-C PD power
-- Give OEM power priority
-- Reduce the risk of backfeeding between power sources
-- Keep the design compact
-- Document the design clearly
-- Test the design honestly
-- Avoid presenting the board as finished before it is proven
-
----
-
-## Safety Warning
-
-This project modifies the power system of a PlayStation 2 console.
-
-Incorrect voltage, unstable power, poor wiring, excessive current draw, or a bad USB-C PD setup can damage the console.
-
-Use this information at your own risk.
-
-This repository is for prototype development and documentation only.
-
----
-
-## Current Status
-
-Prototype / experimental.
-
-This project is not finished, not fully tested, and not ready to be considered a proven install solution.
-
----
-
-## Planned Testing
-
-Planned testing includes:
-
-- No-load voltage testing
-- Dummy-load testing
-- Current draw testing
-- Thermal testing
-- USB-C PD trigger testing
-- OEM power priority testing
-- Power switchover testing
-- Console runtime testing
-- Testing with different PS2 Slim board revisions
-
-Test results will be added as the project develops.
-
----
-
-## Disclaimer
-
-PowerOR is an experimental hardware project.
-
-I am documenting the idea, design, and testing process as I work through it. Nothing in this repository should be taken as a guarantee that the design is safe for every console or every build.
-
-Do not install this in a valuable or heavily modified console without proper testing.
-
-## Project Documents
-
-Detailed project notes are organized in the `Documents` folder.
-
-- [Project Scope](Documents/01-Project-Scope.md)
-- [USB-C PD and the PS2](Documents/02-USB-C-PD-and-the-PS2.md)
-- [USB-C PD Controversy and Risks](Documents/03-USB-C-PD-Controversy-and-Risks.md)
-- [PS2 Power Requirements](Documents/04-PS2-Power-Requirements.md)
-- [USB-C PD Chargers and Cables](Documents/05-USB-C-PD-Chargers-and-Cables.md)
-- [Trigger Board: Purchase or Design?](Documents/06-Trigger-Board-Purchase-or-Design.md)
-- [Power Signal Quality](Documents/07-Power-Signal-Quality.md)
-- [Power Conditioning and Protection](Documents/08-Power-Conditioning-and-Protection.md)
-- [Power OR-ing Design](Documents/09-Power-OR-ing-Design.md)
-- [Board Design](Documents/10-Board-Design.md)
-- [Fitment and Installation Planning](Documents/11-Fitment-and-Installation-Planning.md)
-- [Testing and Validation](Documents/12-Testing-and-Validation.md)
-- [Release Plan and Kits](Documents/13-Release-Plan-and-Kits.md)
-- [FAQ](Documents/14-FAQ.md)
-
-## AI Assistance and Attribution Disclaimer
-
-This project uses AI tools to help with writing, organization, documentation, research, code examples, and design planning. While I review and edit the information, some details may still be incorrect, incomplete, or outdated.
-
-Not all ideas, code, research, methods, or technical information in this project should be credited only to me. This project may reference, build on, or be inspired by community knowledge, open-source projects, datasheets, forum posts, Discord discussions, manufacturer documentation, and the work of other developers and modders.
-
-Credit will be given whenever a source is known. If something is missing credit or needs correction, please let me know so I can update the documentation.
+Public documentation may expand over time as the project matures and release decisions are made.
