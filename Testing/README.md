@@ -1,5 +1,7 @@
-# Testing
+# Private Development Area
 
-This folder contains testing notes and results for the PowerOR project.
+This portion of PS2-PowerOR is currently private.
 
-Testing should include bench testing, dummy-load testing, thermal testing, USB-C PD behavior, OEM PSU priority testing, switchover behavior, and console runtime testing.
+Detailed files for this area may include design notes, hardware layouts, installation information, manufacturing notes, power research, test data, compatibility observations, or development notes that are not ready for public release.
+
+Public documentation will be expanded as the project matures.
